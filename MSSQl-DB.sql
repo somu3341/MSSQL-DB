@@ -56,5 +56,17 @@ Alter Table Employee_Payroll Alter column Department Varchar(20) Not Null;
 Alter Table Employee_Payroll Add BasicPay BigInt, Deductions BigInt, TaxablePay BigInt, IncomeTax BigInt, NetPay BigInt;
 
 --UC10
-Alter Table Employee_Payroll(Name,Salary,StartDate)
-values('Terissa',1000,'2021-07-15');
+Insert into Employee_Payroll(Name,Salary,StartDate,Gender,Phone,Address,Department,BasicPay,Deductions,TaxablePay,IncomeTax,NetPay)
+values('Terissa',1000,'2021-07-15','F','9800988978','Banglore','Sales',100,100,100,100,500);
+Insert into Employee_Payroll(Name,Salary,StartDate,Gender,Phone,Address,Department,BasicPay,Deductions,TaxablePay,IncomeTax,NetPay)
+values('Terissa',1000,'2021-07-15','F','9800988978','Banglore','Marketing',100,100,100,100,500);
+
+--UC10-Refactor
+Create table Department
+(
+Id int primary key identity(1,1),
+DeptName Varchar(20),
+EmployeeID int foreign key(Employee_Payroll)
+)
+Insert into Department(DepName,EmployeeId) values('Sales',1);
+Insert into Department(DepName,EmployeeId) values('Marketing',1);
