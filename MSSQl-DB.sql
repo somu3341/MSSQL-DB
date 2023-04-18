@@ -61,12 +61,16 @@ values('Terissa',1000,'2021-07-15','F','9800988978','Banglore','Sales',100,100,1
 Insert into Employee_Payroll(Name,Salary,StartDate,Gender,Phone,Address,Department,BasicPay,Deductions,TaxablePay,IncomeTax,NetPay)
 values('Terissa',1000,'2021-07-15','F','9800988978','Banglore','Marketing',100,100,100,100,500);
 
---UC10-Refactor
+--UC11
 Create table Department
 (
 Id int primary key identity(1,1),
 DeptName Varchar(20),
-EmployeeID int foreign key(Employee_Payroll)
+EmployeeID int Foreign key REFERENCES Employee_Payroll(Id)
 )
-Insert into Department(DepName,EmployeeId) values('Sales',1);
-Insert into Department(DepName,EmployeeId) values('Marketing',1);
+Insert into Department(DeptName,EmployeeId) values('Sales',1);
+Insert into Department(DeptName,EmployeeId) values('Marketing',1);
+Select*from Department;
+
+--UC12
+Select*from Employee_Payroll;
