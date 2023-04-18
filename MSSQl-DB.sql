@@ -54,6 +54,12 @@ Alter Table Employee_Payroll Alter column Department Varchar(20) Not Null;
 
 --UC9
 Alter Table Employee_Payroll Add BasicPay BigInt, Deductions BigInt, TaxablePay BigInt, IncomeTax BigInt, NetPay BigInt;
+update Employee_Payroll set Phone='9809878645',Address='Kolar',Department='Production',BasicPay='',Deductions='',TaxablePay='',IncomeTax='',NetPay='';
+update Employee_Payroll set Phone='9453358645',Address='KGF',Department='QA',BasicPay='',Deductions='',TaxablePay='',IncomeTax='',NetPay='';
+update Employee_Payroll set Phone='8969878645',Address='Banglore',Department='Finance',BasicPay='',Deductions='',TaxablePay='',IncomeTax='',NetPay='';
+update Employee_Payroll set Phone='9809812325',Address='Shivamoga',Department='HR',BasicPay='',Deductions='',TaxablePay='',IncomeTax='',NetPay='';
+update Employee_Payroll set Phone='7845478645',Address='Manglore',Department='Delivary',BasicPay='',Deductions='',TaxablePay='',IncomeTax='',NetPay='';
+
 
 --UC10
 Insert into Employee_Payroll(Name,Salary,StartDate,Gender,Phone,Address,Department,BasicPay,Deductions,TaxablePay,IncomeTax,NetPay)
