@@ -10,16 +10,16 @@ namespace EmployeeProblem
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Double Salary { get; set; }
+        public double Salary { get; set; }
         public DateTime StartDate { get; set; }
         public char Gender { get; set; }
         public String Phone { get; set; }
         public string Address { get; set; }
         public string Department { get; set; }
-        public Double BasicPay { get; set; }
-        public Double Deductions { get; set; }
-        public Double TaxablePay { get; set; }
-        public Double IncomeTax { get; set; }
-        public Double NetPay { get; set; }
+        public double BasicPay { get; set; }
+        public double Deductions { get; set; }
+        public double TaxablePay { get; set; }
+        public double IncomeTax { get; set; }
+        public double NetPay { get; set; }
     }
 }

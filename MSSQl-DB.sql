@@ -80,3 +80,42 @@ Select*from Department;
 
 --UC12
 Select*from Employee_Payroll;
+
+Create Procedure AddEmployee
+(
+@Name Varchar(30),
+@Salary Bigint,
+@StartDate Date,
+@Gender Varchar(30),
+@Phone Varchar(10),
+@Address Varchar(100),
+@Department Varchar(100),
+@BasicPay BigInt,
+@Deductions BigInt,
+@TaxablePay BigInt,
+@IncomeTax BigInt,
+@NetPay BigInt
+)
+As
+Begin
+Insert into Employee_Payroll values(@Name,@Salary,@StartDate,@Gender,@Phone,@Address,@Department,@BasicPay,@Deductions,@TaxablePay,@IncomeTax,@NetPay);
+End
+
+Create Procedure DeleteEmployee
+(
+@Id int
+)
+As
+Begin
+Delete from Employee_Payroll Where Id=@Id;
+End
+
+Create Procedure UpdateEmployee
+(
+@Id int
+@Name varchar(30)
+)
+As
+Begin
+Update from Employee_Payroll set Id=@Id,Name=@Name;
+End
