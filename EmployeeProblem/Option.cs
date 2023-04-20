@@ -10,8 +10,8 @@ namespace EmployeeProblem
 {
     public class Option
     {
-        public static string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial CataLog=Payroll_Service";
-        SqlConnection connection = new SqlConnection(connectionString);
+        public static string connectionstring = "Data Source=(localdb)\\MSSQLLocalDB;Initial CataLog=Payroll_Service";
+        SqlConnection connection = new SqlConnection(connectionstring);
         public void GetAllEmployeePayrollRecords()
         {
             try
@@ -50,9 +50,9 @@ namespace EmployeeProblem
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw new Exception(e.Message);
+                throw new Exception(ex.Message);
             }
         }
         public void AddEmployee(Employe employee)

@@ -112,10 +112,10 @@ End
 
 Create Procedure UpdateEmployee
 (
-@Id int
-@Name varchar(30)
+@Id int,
+@BasicPay Bigint
 )
 As
 Begin
-Update from Employee_Payroll set Id=@Id,Name=@Name;
+Update Employee_Payroll set Name=@Name where Id=@Id;
 End
