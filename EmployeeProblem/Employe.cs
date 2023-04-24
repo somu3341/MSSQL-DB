@@ -12,7 +12,7 @@ namespace EmployeeProblem
         public string Name { get; set; }
         public double Salary { get; set; }
         public DateTime StartDate { get; set; }
-        public char Gender { get; set; }
+        public String Gender { get; set; }
         public String Phone { get; set; }
         public string Address { get; set; }
         public string Department { get; set; }

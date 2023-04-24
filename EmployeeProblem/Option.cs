@@ -32,7 +32,7 @@ namespace EmployeeProblem
                             employee.Name = read.GetString(1);
                             employee.Salary = read.GetInt64(2);
                             employee.StartDate = read.GetDateTime(3);
-                            employee.Gender = read.GetChar(4);
+                            employee.Gender = read.GetString(4);
                             employee.Phone = read.GetString(5);
                             employee.Address = read.GetString(6);
                             employee.Department = read.GetString(7);

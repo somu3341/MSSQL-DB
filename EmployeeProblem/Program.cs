@@ -23,7 +23,7 @@ namespace EmployeeProblem
                             Name = "Somu",
                             Salary = 1000,
                             StartDate = DateTime.Now,
-                            Gender = 'M',
+                            Gender = "M",
                             Phone = "9093938839",
                             Address = "Banglore",
                             Department = "Sales",
